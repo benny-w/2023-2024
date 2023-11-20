@@ -1,0 +1,32 @@
+{
+  "name": "server",
+  "main": "api/app.ts",
+  "scripts": {
+    "dev": "nodemon --watch src --exec ts-node api/app.ts",
+    "build": "tsc",
+    "db:studio": "drizzle-kit studio",
+    "db:migrate": "drizzle-kit push:pg"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^0.6.0",
+    "@trpc/client": "^10.43.6",
+    "@trpc/server": "^10.43.6",
+    "dotenv": "^16.3.1",
+    "drizzle-orm": "^0.29.0",
+    "express": "^4.18.2",
+    "pg": "^8.11.3",
+    "trpc-playground": "^1.0.4",
+    "ts-node": "^10.9.1",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.9.2",
+    "@typescript-eslint/eslint-plugin": "^6.11.0",
+    "drizzle-kit": "^0.20.4",
+    "eslint": "^8.54.0",
+    "nodemon": "^3.0.1",
+    "typescript": "^5.2.2"
+  }
+}

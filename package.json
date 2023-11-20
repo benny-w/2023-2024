@@ -1,0 +1,25 @@
+{
+  "name": "2023-2024",
+  "version": "0.0.1",
+  "description": "This is the monorepo for the 2023-2024 Code for Campus Expo and Express app.",
+  "author": "Code-for-Campus",
+  "scripts": {
+    "check": "prettier --write . && cd client && eslint \"*/**/*.ts*\" --fix && cd ../server && eslint \"*/**/*.ts*\" --fix && cd ../client && tsc --noEmit && cd ../server && tsc --noEmit",
+    "commit": "git-cz"
+  },
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "devDependencies": {
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "prettier": "^3.1.0",
+    "prettier-plugin-tailwindcss": "^0.5.7"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
